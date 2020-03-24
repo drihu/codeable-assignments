@@ -1,0 +1,101 @@
+/*------------------------------
+ RESET STYLES
+------------------------------*/
+* {
+  box-sizing: border-box;
+}
+html {
+  color: #000000;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+}
+body {
+  margin: 0;
+  background-color: #edf2f7;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+form {
+  width: 90%;
+  max-width: 500px;
+  padding: 15px;
+  margin: auto;
+}
+textarea {
+  resize: none;
+}
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+option {
+  font-size: 1rem;
+}
+
+/*------------------------------
+ PAGE STYLES
+------------------------------*/
+.title {
+  width: 80%;
+  margin: 30px auto 15px;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+.subtitle {
+  width: 80%;
+  margin: 0 auto 20px;
+  font-size: 1.25rem;
+  font-weight: normal;
+  text-align: center;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.form-label-optional {
+  color: #4A5568;
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: none;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+.form-check-option {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.form-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #718096;
+  border: 0;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.multiple-select {
+  padding: 5px;
+}
