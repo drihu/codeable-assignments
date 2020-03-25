@@ -1,0 +1,176 @@
+/*------------------------------
+ RESET STYLES
+------------------------------*/
+* {
+  box-sizing: border-box;
+}
+html {
+  color: #333333;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.4;
+}
+body {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+figure {
+  margin: 0;
+}
+li {
+  list-style-type: none;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  text-align: center;
+}
+
+/*------------------------------
+ PAGE STYLES
+------------------------------*/
+body {
+  background-color: #fbfbfb;
+}
+.container {
+  width: 100%;
+  margin: auto;
+  overflow: auto;
+}
+.navigation {
+  float: left;
+  width: 12.5%;
+  margin-top: 30px;
+}
+.logo-wrapper {
+  margin-bottom: 25px;
+  padding: 0 20px;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  padding: 14px 0;
+  background-color: #333333;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+.navigation-title {
+  margin-bottom: 15px;
+  padding: 0 20px;
+  font-weight: 700;
+}
+ul {
+  padding: 0;
+}
+.navbar-item {
+  padding: 15px 20px;
+  list-style-type: none;
+}
+.selected {
+  background-color: #eeeff2;
+  color: #4B74FF;
+  font-weight: 700;
+}
+.navbar-item i {
+  margin-right: 5px;
+}
+.clients {
+  float: right;
+  width: 87.5%;
+  margin-top: 30px;
+  padding: 0 15px;
+}
+.clients-header {
+  overflow: auto;
+  margin-bottom: 40px;
+}
+.brand {
+  float: left;
+  font-size: 2rem;
+}
+.clients-header-buttons {
+  float: right;
+}
+.arrow-down {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 10px;
+  vertical-align: middle;
+}
+.button-filter {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 8px 12px;
+  background-color: #ffffff;
+  border: 1px solid #c6cbd4;
+  border-radius: 2px;
+}
+.button-new-client {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 8px 12px;
+  background-color: #4B74FF;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: #ffffff;
+}
+.button-icon {
+  margin-left: 5px;
+  font-size: 10px;
+}
+thead .active {
+  color: #4B74FF;
+}
+tbody i.active {
+  display: inline-block;
+  margin-right: 5px;
+  color: #0EDD4D;
+  font-size: 8px;
+  vertical-align: middle;
+}
+table {
+  margin-bottom: 30px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+thead {
+  background-color: #ffffff;
+}
+th,
+td {
+  padding: 25px;
+  text-align: left;
+}
+th {
+  opacity: 0.5;
+}
+td:first-child {
+  text-align: center;
+}
+tbody tr:nth-child(odd) {
+  background-color: #f2f3f5;
+}
+tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+label {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #4B74FF;
+  border-radius: 4px;
+  color: #ffffff;
+}
