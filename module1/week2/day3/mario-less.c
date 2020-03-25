@@ -1,5 +1,5 @@
-#include <cs50.h>
 #include <stdio.h>
+#include <cs50.h>
 
 int getPositive(void);
 void printPyramid(int height);
