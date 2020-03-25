@@ -25,3 +25,31 @@ form {
   display: block;
   width: 100%;
 }
+
+.checkbox {
+  display: none;
+}
+
+.checked,
+.unchecked {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.checked {
+  display: none;
+}
+
+.unchecked {
+  display: inline-block;
+}
+
+.checkbox:checked + .unchecked {
+  display: none;
+}
+
+.checkbox:checked ~ .checked {
+  display: inline-block;
+}
+
