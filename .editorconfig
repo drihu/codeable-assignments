@@ -9,7 +9,7 @@ indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.{php,py}]
+[*.{c,php,py}]
 indent_size = 4
 
 [.vscode/*]
