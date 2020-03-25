@@ -3,8 +3,7 @@
 
 int getPositive(void);
 void printPyramid(int height);
-void printSpace(int n);
-void printHash(int n);
+void printChar(char c, int n);
 
 int main(void) {
     int height = getPositive();
@@ -21,20 +20,14 @@ int getPositive(void) {
 
 void printPyramid(int height) {
     for (int i = 1; i <= height; i++) {
-        printSpace(height - i);
-        printHash(i);
+        printChar(' ', height - i);
+        printChar('#', i);
         printf("\n");
     }
 }
 
-void printSpace(int n) {
+void printChar(char c, int n) {
     for (int i = 0; i < n; i++) {
-        printf(" ");
-    }
-}
-
-void printHash(int n) {
-    for (int i = 0; i < n; i++) {
-        printf("#");
+        printf("%c", c);
     }
 }
