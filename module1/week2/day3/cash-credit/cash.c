@@ -15,7 +15,7 @@ int main(void) {
 float getPositive(void) {
     float number;
     do {
-        number = get_float("How much change?: ");
+        number = get_float("Change owed: ");
     } while (number < 0);
     return number;
 }
