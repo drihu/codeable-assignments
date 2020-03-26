@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo with Flexbox</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    body {
+      margin: 0;
+    }
+    .container {
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      flex-direction: row; /* row | row-reverse | column | column-reverse */
+      flex-wrap: wrap; /* nowrap | wrap | wrap-reverse */
+      /*flex-flow: row nowrap;*/
+      justify-content: space-around;
+      /* flex-start | center | flex-end | space-between | space-around | space-evenly  */
+      align-items: flex-start; /* stretch | flex-start | center | flex-end | baseline */
+      align-content: flex-start;
+      /* stretch | flex-start | center | flex-end | space-between | space-around | space-evenly */
+    }
+    .item {
+      /* order: <number> | 0 */
+      width: 100px;
+      /*height: 100px;*/
+      padding: 20px;
+      background-color: blueviolet;
+      color: #ffffff;
+      /*flex-basis: 30%;*/
+      /* flex: <flex-grow> <flex-shrink> <flex-basis> */
+      /* align-self */
+    }
+    .item:nth-child(even) {
+      background-color: rgb(121, 34, 202);
+    }
+    .item:nth-child(3n) {
+      height: 150px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+  </div>
+</body>
+</html>
