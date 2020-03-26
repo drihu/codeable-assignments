@@ -1,0 +1,19 @@
+.container {
+  width: 95%;
+  max-width: 960px;
+  margin: auto;
+}
+.brand {
+  display: block;
+  height: 24px;
+  margin: 30px 0;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px 30px;
+  margin-bottom: 30px;
+}
+.article-img {
+  width: 100%;
+}
