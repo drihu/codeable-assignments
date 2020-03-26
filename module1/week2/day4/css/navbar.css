@@ -30,9 +30,6 @@ a {
   color: inherit;
   text-decoration: none;
 }
-img {
-  display: block;
-}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -65,38 +62,48 @@ body {
 .brand {
   margin-right: 15px;
 }
-.link-list {
+.navbar-menu {
   display: flex;
   padding: 0;
 }
-.link-list li {
+.navbar-menu li {
   margin-right: 10px;
   font-size: 0.875rem;
   font-weight: 700;
   list-style-type: none;
 }
-.link-list :last-child {
+.navbar-menu :last-child {
   margin-right: 0;
 }
-.search {
-  flex-grow: 2;
+.searchbar {
+  flex-grow: 1;
 }
-.search-label {
-  display: block;
+.searchbar-content {
+  display: flex;
+  align-items: center;
   width: 40%;
+  min-width: 200px;
   margin: auto;
   padding: 5px 10px;
   background-color: #ffffff;
   border-radius: 15px;
   color: #000000;
 }
-.search input[type="text"] {
+.search-icon {
+  margin-right: 10px;
+}
+.searchbar-input {
+  flex-grow: 1;
+  min-width: 0;
   background-color: transparent;
   border: 0;
   vertical-align: top;
 }
-.search input[type="text"]:focus {
+.searchbar-input:focus {
   outline: 0;
+}
+.user-icon {
+  vertical-align: bottom;
 }
 .signup-button {
   padding: 10px 15px;
