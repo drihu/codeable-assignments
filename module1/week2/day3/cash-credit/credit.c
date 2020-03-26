@@ -3,9 +3,6 @@
 #include <cs50.h>
 
 string verify(long number);
-int length(long number);
-int firstDigit(long number);
-int firstTwoDigits(long number);
 int sumOfDigits(int number);
 
 int main(void) {
@@ -15,41 +12,35 @@ int main(void) {
 }
 
 string verify(long number) {
-    int checksum = 0;
-    int times = round(length(number) / 2.0);
-    int digit;
     long amount = number;
-    for (int i = 0; i < times; i++) {
-        digit = floor((amount % 100) / 10.0);
-        checksum += sumOfDigits(digit * 2);
-        amount = floor(amount / 100);
-    }
-    amount = number;
-    for (int j = 0; j < times; j++) {
+    int checksum1 = 0;
+    int checksum2 = 0;
+    int checksum;
+    int secondDigit;
+    int digit = 0;
+    int i = 1;
+
+    while (amount > 0) {
+        secondDigit = digit;
         digit = amount % 10;
-        checksum += digit;
-        amount = floor(amount / 100);
+        if (i % 2 == 0) checksum1 += sumOfDigits(digit * 2);
+        else checksum2 += digit;
+        i += 1;
+        amount = floor(amount / 10);
     }
+
+    checksum = checksum1 + checksum2;
+
     if (checksum % 10 == 0) {
-        if (firstDigit(number) == 4) {
+        if (digit == 4) {
             return "VISA";
-        } else if (firstTwoDigits(number) == 34 || firstTwoDigits(number) == 37) {
+        } else if ((digit * 10 + secondDigit) == 34 || (digit * 10 + secondDigit) == 37) {
             return "AMEX";
-        } else if (firstTwoDigits(number) > 50 && firstTwoDigits(number) < 56) {
+        } else if ((digit * 10 + secondDigit) > 50 && (digit * 10 + secondDigit) < 56) {
             return "MASTERCARD";
         }
     }
     return "INVALID";
-}
-
-int length(long number) {
-    long amount = number;
-    int len = 0;
-    while (amount >= 1) {
-        amount /= 10;
-        len += 1;
-    }
-    return len;
 }
 
 int sumOfDigits(int number) {
@@ -60,14 +51,4 @@ int sumOfDigits(int number) {
         amount /= 10;
     }
     return sum;
-}
-
-int firstDigit(long number) {
-    int num = floor(number / pow(10, length(number) - 1));
-    return num;
-}
-
-int firstTwoDigits(long number) {
-    int num = floor(number / pow(10, length(number) - 2));
-    return num;
 }
