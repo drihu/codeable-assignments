@@ -46,30 +46,16 @@ body {
 
 .container {
   display: flex;
-  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
   width: 95%;
+  max-width: 1200px;
   height: 100vh;
   margin: auto;
 }
 
 .article {
-  width: 100%;
-  margin-bottom: 30px;
-}
-
-@media (min-width: 960px) {
-  .container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    max-width: 1200px;
-  }
-
-  .article {
-    width: 25%;
-    margin-bottom: 0;
-  }
+  width: 25%;
 }
 
 .article-number {
