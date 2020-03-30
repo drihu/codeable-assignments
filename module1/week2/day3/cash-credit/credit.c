@@ -1,17 +1,16 @@
 #include <stdio.h>
-#include <math.h>
 #include <cs50.h>
 
-string verify(long number);
+string verifyByLuhn(long number);
 int sumOfDigits(int number);
 
 int main(void) {
     long number = get_long("Number: ");
-    string message = verify(number);
+    string message = verifyByLuhn(number);
     printf("%s\n", message);
 }
 
-string verify(long number) {
+string verifyByLuhn(long number) {
     long amount = number;
     int checksum1 = 0;
     int checksum2 = 0;
@@ -20,15 +19,16 @@ string verify(long number) {
     int digit = 0;
     int i = 1;
 
+    if (number < 1000000000000) return "INVALID";
+
     while (amount > 0) {
         secondDigit = digit;
         digit = amount % 10;
         if (i % 2 == 0) checksum1 += sumOfDigits(digit * 2);
         else checksum2 += digit;
         i += 1;
-        amount = floor(amount / 10);
+        amount /= 10;
     }
-
     checksum = checksum1 + checksum2;
 
     if (checksum % 10 == 0) {
