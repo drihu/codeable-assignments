@@ -6,18 +6,17 @@
 bool isNumeric(string text);
 
 int main(int argc, string argv[]) {
-    if (argc == 1 || argc > 2 || atoi(argv[1]) == 0 || !isNumeric(argv[1])) {
+    if (argc == 1 || argc > 2 || !isNumeric(argv[1])) {
         printf("Usage: ./caesar key\n");
         return 1;
     }
 
-    int key = atoi(argv[1]);
     string p = get_string("plaintext: ");
-    int length = strlen(p);
+    int key = atoi(argv[1]);
     int c;
 
     printf("ciphertext: ");
-    for (int i = 0; i < length; i++) {
+    for (int i = 0, length = strlen(p); i < length; i++) {
         if (p[i] > 64 && p[i] < 91) {
             c = (p[i] - 64 + key) % 26 + 64;
         } else if (p[i] > 96 && p[i] < 123) {
