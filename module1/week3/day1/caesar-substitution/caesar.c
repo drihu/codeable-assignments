@@ -12,7 +12,6 @@ int main(int argc, string argv[]) {
     }
 
     int key = atoi(argv[1]);
-
     string p = get_string("plaintext: ");
     int length = strlen(p);
     int c;
@@ -33,9 +32,7 @@ int main(int argc, string argv[]) {
 
 bool isNumeric(string text) {
     for (int i = 0, len = strlen(text); i < len; i++) {
-        if (text[i] < 48 || text[i] > 57) {
-            return false;
-        }
+        if (text[i] < 48 || text[i] > 57) return false;
     }
     return true;
 }
