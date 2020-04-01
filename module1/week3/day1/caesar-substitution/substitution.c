@@ -44,8 +44,8 @@ bool isValidKey(string text) {
     for (int i = 0, len = strlen(text); i < len; i++) {
         if (!isalpha(text[i])) return false;
 
-        for (int j = 0; j < len - 1 - i; j++) {
-            if (toupper(text[i]) == toupper(text[i + j + 1])) return false;
+        for (int j = i + 1; j < len; j++) {
+            if (toupper(text[i]) == toupper(text[j])) return false;
         }
     }
     return true;
