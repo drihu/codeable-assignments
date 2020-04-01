@@ -11,18 +11,18 @@ int main(int argc, string argv[]) {
         return 1;
     }
 
-    string p = get_string("plaintext: ");
+    string text = get_string("plaintext: ");
     int key = atoi(argv[1]);
-    int c;
+    char c;
 
     printf("ciphertext: ");
-    for (int i = 0, length = strlen(p); i < length; i++) {
-        if (p[i] > 64 && p[i] < 91) {
-            c = (p[i] - 64 + key) % 26 + 64;
-        } else if (p[i] > 96 && p[i] < 123) {
-            c = (p[i] - 96 + key) % 26 + 96;
+    for (int i = 0, length = strlen(text); i < length; i++) {
+        if (text[i] >= 'A' && text[i] <= 'Z') {
+            c = (text[i] - 64 + key) % 26 + 64;
+        } else if (text[i] >= 'a' && text[i] <= 'z') {
+            c = (text[i] - 96 + key) % 26 + 96;
         } else {
-            c = p[i];
+            c = text[i];
         }
         printf("%c", c);
     }
@@ -31,7 +31,7 @@ int main(int argc, string argv[]) {
 
 bool isNumeric(string text) {
     for (int i = 0, len = strlen(text); i < len; i++) {
-        if (text[i] < 48 || text[i] > 57) return false;
+        if (text[i] < '0' || text[i] > '9') return false;
     }
     return true;
 }
