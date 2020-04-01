@@ -21,7 +21,7 @@ int main(void) {
     }
     words += 1;
 
-    index = round(5.88 * ((float) letters / words) - 29.6 * ((float) sentences / words) - 15.8);
+    index = round(5.88 * letters / words - 29.6 * sentences / words - 15.8);
 
     if (index >= 16) {
         printf("Grade 16+\n");
