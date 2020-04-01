@@ -14,25 +14,25 @@ int main(int argc, string argv[]) {
         return 1;
     }
 
-    string plaintext = get_string("plaintext: ");
+    string text = get_string("plaintext: ");
     string base = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     string key = argv[1];
 
     printf("ciphertext: ");
-    for (int i = 0, len = strlen(plaintext); i < len; i++) {
+    for (int i = 0, len = strlen(text); i < len; i++) {
         for (int j = 0; j < 26; j++) {
-            if (plaintext[i] >= 65 && plaintext[i] <= 90) {
-                if (plaintext[i] == base[j]) {
+            if (text[i] >= 'A' && text[i] <= 'Z') {
+                if (text[i] == base[j]) {
                     printf("%c", toupper(key[j]));
                     break;
                 }
-            } else if (plaintext[i] >= 97 && plaintext[i] <= 122) {
-                if (plaintext[i] == tolower(base[j])) {
+            } else if (text[i] >= 'a' && text[i] <= 'z') {
+                if (text[i] == tolower(base[j])) {
                     printf("%c", tolower(key[j]));
                     break;
                 }
             } else {
-                printf("%c", plaintext[i]);
+                printf("%c", text[i]);
                 break;
             }
         }
@@ -45,7 +45,7 @@ bool isValidKey(string text) {
         if (!isalpha(text[i])) return false;
 
         for (int j = 0; j < len - 1 - i; j++) {
-            if (toupper(text[i]) == toupper(text[j + i + 1])) return false;
+            if (toupper(text[i]) == toupper(text[i + j + 1])) return false;
         }
     }
     return true;
