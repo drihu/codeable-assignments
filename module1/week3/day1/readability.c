@@ -5,18 +5,17 @@
 
 int main(void) {
     string text = get_string("Text: ");
-    int length = strlen(text);
     int letters = 0;
     int words = 0;
     int sentences = 0;
     int index;
 
-    for (int i = 0; i < length; i++) {
+    for (int i = 0, len = strlen(text); i < len; i++) {
         if (text[i] == ' ') {
             words += 1;
         } else if (text[i] == '.' || text[i] == '!' || text[i] == '?') {
             sentences += 1;
-        } else if ((text[i] >= 65 && text[i] <= 90) || (text[i] >= 97 && text[i] <= 122)) {
+        } else if ((text[i] >= 'A' && text[i] <= 'Z') || (text[i] >= 'a' && text[i] <= 'z')) {
             letters += 1;
         }
     }
