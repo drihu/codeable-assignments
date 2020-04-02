@@ -12,9 +12,7 @@
   animation: spin 1s linear infinite;
 }
 @keyframes spin {
-  to {
-    transform: rotateZ(360deg);
-  }
+  to { transform: rotateZ(360deg); }
 }
 .spinner-item {
   position: absolute;
@@ -54,57 +52,51 @@
 .spinner-item:last-child {
   transform: translateX(40px) rotateZ(320deg);
 }
+.spinner-item .spinner-circle {
+  border-radius: 50%;
+}
 .spinner-item:first-child .spinner-circle {
   width: 8px;
   height: 8px;
   background: #F3F3F3;
-  border-radius: 50%;
 }
 .spinner-item:nth-child(2) .spinner-circle {
   width: 10px;
   height: 10px;
   background: #E7E7E7;
-  border-radius: 50%;
 }
 .spinner-item:nth-child(3) .spinner-circle {
   width: 11px;
   height: 11px;
   background: #CECECE;
-  border-radius: 50%;
 }
 .spinner-item:nth-child(4) .spinner-circle {
   width: 12px;
   height: 12px;
   background: #BEBEBE;
-  border-radius: 50%;
 }
 .spinner-item:nth-child(5) .spinner-circle {
   width: 14px;
   height: 14px;
   background: #9A9A9A;
-  border-radius: 50%;
 }
 .spinner-item:nth-child(6) .spinner-circle {
   width: 15px;
   height: 15px;
   background: #8E8E8E;
-  border-radius: 50%;
 }
 .spinner-item:nth-child(7) .spinner-circle {
   width: 16px;
   height: 16px;
   background: #757575;
-  border-radius: 50%;
 }
 .spinner-item:nth-child(8) .spinner-circle {
   width: 18px;
   height: 18px;
   background: #595959;
-  border-radius: 50%;
 }
 .spinner-item:last-child .spinner-circle {
   width: 20px;
   height: 20px;
   background: #515151;
-  border-radius: 50%;
 }
