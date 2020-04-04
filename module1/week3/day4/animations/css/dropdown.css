@@ -30,15 +30,17 @@
 .dropdown {
   position: relative;
 }
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
 .dropdown-menu {
-  display: none;
   position: absolute;
+  height: 0;
+  overflow: hidden;
+}
+.dropdown:hover .dropdown-menu {
+  height: 232px;
+  transition: 0.25s ease-in;
 }
 .dropdown-container {
-  margin-top: 8px;
+  margin: 8px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   overflow: hidden;
