@@ -16,14 +16,14 @@
 }
 @keyframes shift {
   0% {
-    border: 25px solid var(--green);
+    border: 0 solid transparent;
+    border-bottom: 50px solid var(--green);
   }
   16.67% {
     border-top: 6px solid transparent;
     border-right: 25px solid transparent;
     border-bottom: 44px solid var(--blue);
     border-left: 25px solid transparent;
-    border-radius: 0;
   }
   33.33% {
     border-top: 6px solid transparent;
@@ -42,6 +42,7 @@
   }
   83.33% {
     border: 25px solid var(--green);
+    border-radius: 0;
   }
   100% {
     border: 25px solid var(--green);
