@@ -32,7 +32,7 @@ char * cipher(string text, int key) {
             c[i] = text[i];
         }
     }
-
+    c[len] = '\0';
     return c;
 }
 
