@@ -4,6 +4,7 @@
 #include <cs50.h>
 
 bool isNumeric(string text);
+char * cipher(string text, int key);
 
 int main(int argc, string argv[]) {
     if (argc == 1 || argc > 2 || !isNumeric(argv[1])) {
@@ -13,20 +14,30 @@ int main(int argc, string argv[]) {
 
     string text = get_string("plaintext: ");
     int key = atoi(argv[1]);
-    char c;
 
     printf("ciphertext: ");
-    for (int i = 0, length = strlen(text); i < length; i++) {
-        if (text[i] >= 'A' && text[i] <= 'Z') {
-            c = (text[i] - 64 + key) % 26 + 64;
-        } else if (text[i] >= 'a' && text[i] <= 'z') {
-            c = (text[i] - 96 + key) % 26 + 96;
-        } else {
-            c = text[i];
-        }
-        printf("%c", c);
-    }
+    printf("%s", cipher(text, key));
     printf("\n");
+}
+
+char * cipher(string text, int key) {
+    int len = strlen(text);
+    char c[len + 1];
+    char * cipher;
+
+    for (int i = 0; i < len; i++) {
+        if (text[i] >= 'A' && text[i] <= 'Z') {
+            c[i] = (text[i] - 64 + key) % 26 + 64;
+        } else if (text[i] >= 'a' && text[i] <= 'z') {
+            c[i] = (text[i] - 96 + key) % 26 + 96;
+        } else {
+            c[i] = text[i];
+        }
+    }
+    c[len] = '\0';
+
+    cipher = c;
+    return cipher;
 }
 
 bool isNumeric(string text) {
