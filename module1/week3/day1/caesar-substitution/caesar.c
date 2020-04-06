@@ -16,14 +16,12 @@ int main(int argc, string argv[]) {
     int key = atoi(argv[1]);
 
     printf("ciphertext: ");
-    printf("%s", cipher(text, key));
-    printf("\n");
+    printf("%s\n", cipher(text, key));
 }
 
 char * cipher(string text, int key) {
     int len = strlen(text);
-    char c[len + 1];
-    char * cipher;
+    static char c[255];
 
     for (int i = 0; i < len; i++) {
         if (text[i] >= 'A' && text[i] <= 'Z') {
@@ -34,10 +32,8 @@ char * cipher(string text, int key) {
             c[i] = text[i];
         }
     }
-    c[len] = '\0';
 
-    cipher = c;
-    return cipher;
+    return c;
 }
 
 bool isNumeric(string text) {
